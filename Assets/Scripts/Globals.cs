@@ -6,5 +6,6 @@ public static class Globals
 {   
     public static int DeadAI;
     public static int AICount;
+    public static float AIHealth;
 
 }

@@ -23,7 +23,7 @@ public class EnemeySpawner : MonoBehaviour
     private void Awake()
     {
         Instantiate(_EndChecker, transform.position, Quaternion.identity);
-        RandomNoOfEnemies = Random.Range(MinEnemies, MaxEnemies);
+        RandomNoOfEnemies = Random.Range(MinEnemies,MaxEnemies);
         Globals.AICount= RandomNoOfEnemies;
 
     }

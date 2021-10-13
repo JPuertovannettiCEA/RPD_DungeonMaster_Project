@@ -14,11 +14,11 @@ public class EndCondition : MonoBehaviour
     private GameObject _treasureChest;
 
     [SerializeField]
-    private Vector3 _treasureOffset;
-
+    private Transform _treasurePosition;
+    
     private void Awake()
     {
-        Globals.DeadAI=0;
+        Globals.DeadAI = 0;
 
     }
 
@@ -27,9 +27,8 @@ public class EndCondition : MonoBehaviour
         // Debug.Log();
         if (Globals.AICount == Globals.DeadAI)
         {
-            Instantiate(_treasureChest, _playerRef.transform.position + _treasureOffset, Quaternion.identity);
-            // Debug.Log(_noOfDeadAI);
-            Globals.DeadAI=-2;
+            Instantiate(_treasureChest, _treasurePosition.transform.position , Quaternion.identity);
+            Globals.DeadAI = -2;
         }
     }
 }

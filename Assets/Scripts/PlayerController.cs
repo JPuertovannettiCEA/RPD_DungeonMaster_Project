@@ -33,11 +33,11 @@ public class PlayerController : MonoBehaviour
 
         float hitting = _playerInput.Player.Fire.ReadValue<float>();
 
-        // if(hitting > 0)
-        // {
-        //     // Debug.Log($"hit");
-        // }
-        // hitting = 0f;
+        if(hitting > 0)
+        {
+            Debug.Log($"hit");
+        }
+        hitting = 0f;
     }
     
 

@@ -49,5 +49,5 @@ MonoBehaviour:
     type: 3}
   _treasureChest: {fileID: 646307191859545806, guid: 4418569a035cae3448c70cea46690263,
     type: 3}
-  _noOfDeadAI: 0
-  _treasureOffset: {x: 0, y: 0.5, z: 0}
+  _treasurePosition: {fileID: 8250813575643965085, guid: 050f944abfae3ad4c9bae4d6c0d4c755,
+    type: 3}
