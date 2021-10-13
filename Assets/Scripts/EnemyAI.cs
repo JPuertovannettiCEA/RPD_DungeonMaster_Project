@@ -8,10 +8,9 @@ public class EnemyAI : MonoBehaviour
     [SerializeField]
     private Rigidbody2D _enemyRB;
 
-    private GameObject _player;
+    private RPD_DungeonMaster_Project _playerInput;
 
-    [SerializeField]
-    public float Health = 100f;
+    private GameObject _player;
 
     [SerializeField]
     public int _EnemyNumber;
@@ -26,11 +25,12 @@ public class EnemyAI : MonoBehaviour
     private float _moveSpeed = 0.5f;
 
     [SerializeField]
-    private float _attackValue;
+    public float EnemyHealth;
 
     private void Awake()
     {
         _player = GameObject.FindGameObjectWithTag("Player");
+        EnemyHealth = 100f;
     }
     private void Update()
     {
@@ -39,7 +39,7 @@ public class EnemyAI : MonoBehaviour
 
     private void HealthCondition()
     {
-        if (Health <= 0)
+        if (EnemyHealth <= 0)
         {
             _isDead = true;
             this.gameObject.SetActive(false);
@@ -51,7 +51,7 @@ public class EnemyAI : MonoBehaviour
 
     private void RotateCharacter()
     {
-        Vector3 direction = _player.transform.position - transform.position;
+        Vector3 direction = (_player.transform.position + new Vector3(0.2f, 0.2f, 0f)) - transform.position;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         _enemyRB.rotation = angle;
         direction.Normalize();
@@ -60,10 +60,27 @@ public class EnemyAI : MonoBehaviour
 
     private void moveCharacter(Vector2 direction) => _enemyRB.MovePosition((Vector2)transform.position + (direction * _moveSpeed * Time.deltaTime));
 
+    private void OnTriggerStay2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            // Debug.Log($"entertag");
+            moveCharacter(_movement);
+            RotateCharacter();
+            if (Globals.hittingEnemy)
+            {
+                Debug.Log(Globals.hittingEnemy);
+                EnemyHealth -= Globals.AIAttackValue;
+                Debug.Log(EnemyHealth);
+            }
+
+        }
+    }
+
     private void FixedUpdate()
     {
-        moveCharacter(_movement);
-        RotateCharacter();
+
+        // _playerInput.Player.Fire.started += ctx => Globals.hittingEnemy = true;
     }
 
 }

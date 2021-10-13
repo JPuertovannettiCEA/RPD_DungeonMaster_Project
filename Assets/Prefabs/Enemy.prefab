@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6320023050935045128}
   - component: {fileID: 222190139152719499}
   - component: {fileID: 6347357336523362756}
+  - component: {fileID: -6026733951008753084}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -119,13 +120,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _enemyRB: {fileID: 222190139152719499}
-  Health: 100
-  _endConditionRef: {fileID: 8057206272705209416, guid: a89d7aabd7ac55542876699797821984,
-    type: 3}
-  _enemeyRef: {fileID: 8401943541637950585, guid: f9fd445d59ae207488d606b0e8496302,
-    type: 3}
   _EnemyNumber: 0
   _isDead: 0
   _movement: {x: 0, y: 0}
   _moveSpeed: 0.5
-  _attackValue: 0
+  EnemyHealth: 100
+--- !u!58 &-6026733951008753084
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 501350632842649411}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 15

@@ -10,10 +10,14 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private float _speed = 10f;
 
+    [SerializeField]
+    private EnemyAI _enemyRef;
+
     private void Awake()
     {
         _playerInput = new RPD_DungeonMaster_Project();
         _playerRb = GetComponent<Rigidbody2D>();
+        Globals.PlayerHealth = 100f;
     }
 
     private void OnEnable()
@@ -31,14 +35,12 @@ public class PlayerController : MonoBehaviour
         Vector2 moveInput = _playerInput.Player.Move.ReadValue<Vector2>();
         _playerRb.velocity = moveInput * _speed;
 
-        float hitting = _playerInput.Player.Fire.ReadValue<float>();
+        // Globals.hittingEnemy = Mouse.current.leftButton.isPressed;
 
-        if(hitting > 0)
-        {
-            Debug.Log($"hit");
+        if (Globals.hittingEnemy = Mouse.current.leftButton.isPressed)
+        {   
         }
-        hitting = 0f;
     }
-    
+
 
 }
