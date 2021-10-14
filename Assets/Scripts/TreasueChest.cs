@@ -13,6 +13,7 @@ public class TreasueChest : MonoBehaviour
             {
                 gameObject.SetActive(false);
                 Globals.KeyCollected = true;
+                
             }
         }
     }

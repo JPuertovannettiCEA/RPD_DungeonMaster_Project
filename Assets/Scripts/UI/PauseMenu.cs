@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 public class PauseMenu : MonoBehaviour
 {
     [SerializeField]
-    public GameObject _resumeButton, _mainMenuButton, _quit, _blurImage, _EventSystem, _healthbar, _chestBar;
+    public GameObject _resumeButton, _mainMenuButton, _quit, _blurImage, _EventSystem, _healthbar, _chestBar,_endDoor;
 
     [SerializeField]
     private AudioSource _bgAudio;
@@ -16,6 +16,11 @@ public class PauseMenu : MonoBehaviour
 
     private void Update()
     {
+        if(Globals.KeyCollected)
+        {
+            _endDoor.gameObject.SetActive(false);
+            // Debug.LogError($"DoorOpen");
+        }
         if (Time.timeScale == 0)
         {
             _EventSystem.gameObject.SetActive(true);
