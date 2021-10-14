@@ -56,6 +56,12 @@ public class PlayerController : MonoBehaviour
         {
             this.gameObject.SetActive(false);
         }
+
+        if(Keyboard.current.pKey.isPressed)
+        {
+            Time.timeScale = 0;
+            
+        }
     }
 
     private void OnTriggerStay2D(Collider2D other)
