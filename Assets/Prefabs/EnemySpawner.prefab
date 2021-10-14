@@ -46,12 +46,15 @@ MonoBehaviour:
   RandomPosition: {x: 0, y: 0}
   MinPostion: {x: -4, y: -4}
   MaxPostion: {x: 4, y: 4}
-  RandomNoOfEnemies: 0
-  MinEnemies: 4
-  MaxEnemies: 16
   _enemyAIRef: {fileID: 6347357336523362756, guid: b7400fbf5b2bbf448af98ef37e97200e,
     type: 3}
   _EndChecker: {fileID: 1131823347986564449, guid: a89d7aabd7ac55542876699797821984,
     type: 3}
   _enemyPrefab: {fileID: 501350632842649411, guid: b7400fbf5b2bbf448af98ef37e97200e,
     type: 3}
+  _enemy1sp: {fileID: 0}
+  _enemy2sp: {fileID: 0}
+  _enemy3sp: {fileID: 0}
+  _enemy4sp: {fileID: 0}
+  _enemy5sp: {fileID: 0}
+  _enemy6sp: {fileID: 0}

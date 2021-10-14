@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -10,10 +11,25 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private float _speed = 10f;
 
+    [SerializeField]
+    private EnemyAI _enemyRef;
+
+    [SerializeField]
+    private Vector3 _enemyOffset;
+
+    [SerializeField]
+    private Vector3 _minusOffset;
+
+    private GameObject _healthRef;
+
     private void Awake()
     {
+        _healthRef = GameObject.FindGameObjectWithTag("HealthBar");
+        Globals._healthBar = _healthRef.GetComponent<Slider>();
         _playerInput = new RPD_DungeonMaster_Project();
         _playerRb = GetComponent<Rigidbody2D>();
+        Globals.PlayerHealth = 100f;
+        Globals._healthBar.value = Globals.PlayerHealth;
     }
 
     private void OnEnable()
@@ -31,14 +47,31 @@ public class PlayerController : MonoBehaviour
         Vector2 moveInput = _playerInput.Player.Move.ReadValue<Vector2>();
         _playerRb.velocity = moveInput * _speed;
 
-        float hitting = _playerInput.Player.Fire.ReadValue<float>();
-
-        if(hitting > 0)
-        {
-            Debug.Log($"hit");
-        }
-        hitting = 0f;
+        Globals.hittingEnemy = Mouse.current.leftButton.isPressed;
     }
-    
+
+    private void Update()
+    {
+        if (Globals.PlayerHealth <= 0)
+        {
+            this.gameObject.SetActive(false);
+        }
+    }
+
+    private void OnTriggerStay2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Enemy"))
+        {
+            _minusOffset = other.transform.position.normalized - transform.position.normalized;
+            Debug.Log(_minusOffset);
+            if (_minusOffset.x <= _enemyOffset.x && _minusOffset.y <= _enemyOffset.y)
+            {
+                Globals.PlayerHealth -= Globals.PlayerAttackValue;
+                Globals._healthBar.value = Globals.PlayerHealth;
+                Debug.Log(Globals.PlayerHealth);
+            }
+        }
+    }
+
 
 }
