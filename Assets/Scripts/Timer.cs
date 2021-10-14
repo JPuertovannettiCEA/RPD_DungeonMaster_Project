@@ -1,8 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class Timer : MonoBehaviour
 {
@@ -27,9 +25,9 @@ public class Timer : MonoBehaviour
             _textRef.color = Color.red;
         }
 
-        if(StartTimer<=0)
+        if(StartTimer<=1)
         {
-            //Gameover Screen
+            SceneManager.LoadScene("GameOver");
         }
     }
 }
