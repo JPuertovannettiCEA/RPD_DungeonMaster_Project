@@ -49,7 +49,7 @@ MonoBehaviour:
     type: 3}
   _treasureChest: {fileID: 646307191859545806, guid: 4418569a035cae3448c70cea46690263,
     type: 3}
-  _treasurePosition: {fileID: 8250813575643965085, guid: 050f944abfae3ad4c9bae4d6c0d4c755,
+  _treasurePosition: {fileID: 7219441663787852414, guid: c3d5ab253b8b5a34d8e0d9452d3a2700,
     type: 3}
   _chestAppears: {fileID: 1629141380231661279, guid: 6aed08eef72836d4488046a92c16d092,
     type: 3}

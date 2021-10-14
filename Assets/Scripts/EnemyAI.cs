@@ -27,8 +27,8 @@ public class EnemyAI : MonoBehaviour
     [SerializeField]
     public float EnemyHealth;
 
-    [SerializeField]
-    private GameObject _healthEnemy;
+    //[SerializeField]
+    //private GameObject _healthEnemy;
 
     private Vector3 localscale;
 
@@ -42,7 +42,7 @@ public class EnemyAI : MonoBehaviour
     {
         _player = GameObject.FindGameObjectWithTag("Player");
         EnemyHealth = 100f;
-        localscale = _healthEnemy.transform.localScale;
+        //localscale = _healthEnemy.transform.localScale;
 
     }
     private void Update()
