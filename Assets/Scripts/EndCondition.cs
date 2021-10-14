@@ -43,5 +43,9 @@ public class EndCondition : MonoBehaviour
             Globals._infoText.text = ("CHEST APPEARED");
             _chestAppears.Play(0);
         }
+        if (Globals.KeyCollected == true)
+        {
+            Globals._infoText.text = ("KEY COLLECTED");
+        }
     }
 }
