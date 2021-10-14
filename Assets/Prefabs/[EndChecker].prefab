@@ -51,3 +51,5 @@ MonoBehaviour:
     type: 3}
   _treasurePosition: {fileID: 8250813575643965085, guid: 050f944abfae3ad4c9bae4d6c0d4c755,
     type: 3}
+  _chestAppears: {fileID: 1629141380231661279, guid: 6aed08eef72836d4488046a92c16d092,
+    type: 3}
