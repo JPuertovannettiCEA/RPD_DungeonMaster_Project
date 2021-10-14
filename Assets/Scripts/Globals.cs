@@ -8,7 +8,7 @@ public static class Globals
     public static int enemySpawnedMax = 0;
     public static float PlayerHealth = 100f;
     public static float AIAttackValue = 5f;
-    public static float PlayerAttackValue = 0.02f;
+    public static float PlayerAttackValue = 0.1f;
     public static float EnemyAIHealth = 100f;
     public static bool hittingEnemy = false;
     public static bool KeyCollected = false;
