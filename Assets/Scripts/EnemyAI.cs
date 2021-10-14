@@ -53,7 +53,7 @@ public class EnemyAI : MonoBehaviour
     {
         Vector3 direction = (_player.transform.position + new Vector3(0.2f, 0.2f, 0f)) - transform.position;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        _enemyRB.rotation = angle;
+        // _enemyRB.rotation = angle;
         direction.Normalize();
         _movement = direction;
     }
