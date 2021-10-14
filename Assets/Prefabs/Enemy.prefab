@@ -126,6 +126,10 @@ MonoBehaviour:
   _movement: {x: 0, y: 0}
   _moveSpeed: 0.5
   EnemyHealth: 100
+  _healthEnemy: {fileID: 0}
+  _Enemy: {fileID: 1963694826708951729, guid: d6792c1893870794f941118e143143b3, type: 3}
+  _enemyHits: {fileID: 8300000, guid: 7c71a8195d88a1242bf9fff15c6017b0, type: 3}
+  _enemyKilled: {fileID: 8300000, guid: 7c71a8195d88a1242bf9fff15c6017b0, type: 3}
 --- !u!58 &-6026733951008753084
 CircleCollider2D:
   m_ObjectHideFlags: 0

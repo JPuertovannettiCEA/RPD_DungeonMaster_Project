@@ -6,6 +6,14 @@ public class PauseMenu : MonoBehaviour
     [SerializeField]
     public GameObject _resumeButton, _mainMenuButton, _quit, _blurImage, _EventSystem, _healthbar, _chestBar;
 
+    [SerializeField]
+    private AudioSource _bgAudio;
+
+    private void Awake()
+    {
+        _bgAudio.Play(0);
+    }
+
     private void Update()
     {
         if (Time.timeScale == 0)

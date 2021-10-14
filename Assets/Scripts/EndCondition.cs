@@ -15,7 +15,10 @@ public class EndCondition : MonoBehaviour
     [SerializeField]
     private Transform _treasurePosition;
 
-    private GameObject _chestRef,_infoText;
+    [SerializeField]
+    private AudioSource _chestAppears;
+
+    private GameObject _chestRef, _infoText;
 
     private void Awake()
     {
@@ -38,7 +41,7 @@ public class EndCondition : MonoBehaviour
             Instantiate(_treasureChest, _treasurePosition.transform.position, Quaternion.identity);
             Globals.DeadAI = 6.1f;
             Globals._infoText.text = ("CHEST APPEARED");
-
+            _chestAppears.Play(0);
         }
     }
 }
