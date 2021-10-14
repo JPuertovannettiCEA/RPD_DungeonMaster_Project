@@ -21,6 +21,10 @@ public class PlayerController : MonoBehaviour
     private Vector3 _minusOffset;
 
     private GameObject _healthRef;
+    private AudioSource _attackSFX;
+
+    [SerializeField]
+    private AudioSource _hitSFX;
 
     private void Awake()
     {
@@ -30,6 +34,7 @@ public class PlayerController : MonoBehaviour
         _playerRb = GetComponent<Rigidbody2D>();
         Globals.PlayerHealth = 100f;
         Globals._healthBar.value = Globals.PlayerHealth;
+        _attackSFX = GetComponent<AudioSource>();
     }
 
     private void OnEnable()
@@ -68,6 +73,7 @@ public class PlayerController : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Enemy"))
         {
+            _hitSFX.Play();
             _minusOffset = other.transform.position.normalized - transform.position.normalized;
             Debug.Log(_minusOffset);
             if (_minusOffset.x <= _enemyOffset.x && _minusOffset.y <= _enemyOffset.y)
