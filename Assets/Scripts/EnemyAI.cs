@@ -27,16 +27,17 @@ public class EnemyAI : MonoBehaviour
     [SerializeField]
     public float EnemyHealth;
 
-    //[SerializeField]
-    //private GameObject _healthEnemy;
+    [SerializeField]
+    private GameObject _enemyKilledAudio;
+
+    [SerializeField]
+
 
     private Vector3 localscale;
 
     [SerializeField]
     private AudioSource _Enemy;
 
-    [SerializeField]
-    private AudioClip _enemyHits, _enemyKilled;
 
     private void Awake()
     {
@@ -56,7 +57,8 @@ public class EnemyAI : MonoBehaviour
         if (EnemyHealth <= 0)
         {
             _isDead = true;
-            _Enemy.PlayOneShot(_enemyKilled);
+            // _Enemy.PlayOneShot(_enemyKilled);
+            Instantiate(_enemyKilledAudio, transform.position, Quaternion.identity);
             this.gameObject.SetActive(false);
             Globals.DeadAI++;
             // Debug.Log(Globals.DeadAI);
@@ -86,7 +88,8 @@ public class EnemyAI : MonoBehaviour
             {
                 // Debug.Log(Globals.hittingEnemy);
                 EnemyHealth -= Globals.AIAttackValue;
-                _Enemy.PlayOneShot(_enemyHits);
+                // _Enemy.Play(0);
+
                 // Debug.Log(EnemyHealth);
             }
 

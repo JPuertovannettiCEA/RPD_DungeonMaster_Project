@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7996117621758398402}
   - component: {fileID: 7996117621758398401}
+  - component: {fileID: -706392672615846284}
   m_Layer: 0
   m_Name: GotKeySFX
   m_TagString: Untagged
@@ -42,7 +43,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: a14178dc0f0ecb849b0e9948629f22cf, type: 3}
-  m_PlayOnAwake: 0
+  m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -127,3 +128,16 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &-706392672615846284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7996117621758398400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0253da4e2e46ebd4e9a74a651a4f89bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _lifeSpan: 1

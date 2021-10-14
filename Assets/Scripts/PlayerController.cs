@@ -30,6 +30,12 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private AudioSource _pauseIn;
 
+    [SerializeField]
+    private GameObject _playerKilledAudio;
+
+    [SerializeField]
+    private GameObject _killPlayer;
+
     private void Awake()
     {
         _healthRef = GameObject.FindGameObjectWithTag("HealthBar");
@@ -63,18 +69,19 @@ public class PlayerController : MonoBehaviour
     {
         if (Globals.PlayerHealth <= 0)
         {
+            Instantiate(_playerKilledAudio, transform.position, Quaternion.identity);
             this.gameObject.SetActive(false);
             SceneManager.LoadScene("GameOver");
         }
 
-        if(Keyboard.current.qKey.isPressed)
+        if (Keyboard.current.qKey.isPressed)
         {
             _pauseIn.Play();
             Time.timeScale = 0;
 
         }
 
-        if(Keyboard.current.spaceKey.isPressed)
+        if (Keyboard.current.spaceKey.isPressed)
         {
             _attackSFX.Play();
 
@@ -91,6 +98,7 @@ public class PlayerController : MonoBehaviour
             {
                 Globals.PlayerHealth -= Globals.PlayerAttackValue;
                 Globals._healthBar.value = Globals.PlayerHealth;
+                Instantiate(_killPlayer, transform.position, Quaternion.identity);
                 Debug.Log(Globals.PlayerHealth);
             }
         }

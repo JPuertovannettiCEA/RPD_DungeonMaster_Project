@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &7308809426204387509
+--- !u!1 &6754214722228397435
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,23 +8,23 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8957065915077569544}
-  - component: {fileID: 6076783917517008185}
-  - component: {fileID: 2382003267778671818}
+  - component: {fileID: 4428722409032500111}
+  - component: {fileID: 891131267950250791}
+  - component: {fileID: -210209749370152626}
   m_Layer: 0
-  m_Name: PlayerHits
+  m_Name: Timeless
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8957065915077569544
+--- !u!4 &4428722409032500111
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7308809426204387509}
+  m_GameObject: {fileID: 6754214722228397435}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -32,20 +32,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!82 &6076783917517008185
+--- !u!82 &891131267950250791
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7308809426204387509}
+  m_GameObject: {fileID: 6754214722228397435}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: c3a8698a91fffc84db47c16252b2b75d, type: 3}
+  m_audioClip: {fileID: 8300000, guid: a14178dc0f0ecb849b0e9948629f22cf, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
-  m_Pitch: 1
+  m_Volume: 0.71
+  m_Pitch: 2.95
   Loop: 0
   Mute: 0
   Spatialize: 0
@@ -128,13 +128,13 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &2382003267778671818
+--- !u!114 &-210209749370152626
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7308809426204387509}
+  m_GameObject: {fileID: 6754214722228397435}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0253da4e2e46ebd4e9a74a651a4f89bc, type: 3}

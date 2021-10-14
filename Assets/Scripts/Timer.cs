@@ -8,10 +8,13 @@ public class Timer : MonoBehaviour
     private TMP_Text _textRef;
     [SerializeField]
     private float StartTimer = 60f;
+    [SerializeField]
+    private GameObject _timeless;
 
     private void Awake()
     {
         _textRef.text = "60";
+
     }
 
     private void Update()
@@ -23,6 +26,7 @@ public class Timer : MonoBehaviour
         if(StartTimer<20f)
         {
             _textRef.color = Color.red;
+            Instantiate(_timeless,transform.position,Quaternion.identity);
         }
 
         if(StartTimer<=1)

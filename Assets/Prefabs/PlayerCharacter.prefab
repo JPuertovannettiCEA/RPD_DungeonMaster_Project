@@ -280,7 +280,12 @@ MonoBehaviour:
     type: 3}
   _enemyOffset: {x: 0.3, y: 0.3, z: 0}
   _minusOffset: {x: 0, y: 0, z: 0}
-  _hitSFX: {fileID: 63387972}
+  _hitSFX: {fileID: 0}
+  _pauseIn: {fileID: 0}
+  _playerKilledAudio: {fileID: 7308809426204387509, guid: e8f0461246da1fd40b7f1a03dd23b8f3,
+    type: 3}
+  _killPlayer: {fileID: 7009528676778633945, guid: f3988e6f2ed842e4db13f3cddaf32984,
+    type: 3}
 --- !u!61 &216252624
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -7,7 +7,7 @@ public class PauseMenu : MonoBehaviour
     public GameObject _resumeButton, _mainMenuButton, _quit, _blurImage, _EventSystem, _healthbar, _chestBar,_endDoor;
 
     [SerializeField]
-    private AudioSource _pauseOut;
+    private AudioSource _pauseOut,_keyCollected;
 
     private void Awake()
     {
@@ -17,6 +17,7 @@ public class PauseMenu : MonoBehaviour
     {
         if(Globals.KeyCollected)
         {
+            _keyCollected.Play(0);
             _endDoor.gameObject.SetActive(false);
             // Debug.LogError($"DoorOpen");
         }

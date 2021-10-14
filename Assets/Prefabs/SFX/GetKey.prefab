@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6873580291386380175}
   - component: {fileID: 4917504360210855727}
+  - component: {fileID: 6335614624950023622}
   m_Layer: 0
   m_Name: GetKey
   m_TagString: Untagged
@@ -127,3 +128,16 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &6335614624950023622
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5273664594757521406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0253da4e2e46ebd4e9a74a651a4f89bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _lifeSpan: 1
