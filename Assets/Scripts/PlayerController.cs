@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
@@ -47,7 +48,7 @@ public class PlayerController : MonoBehaviour
         Vector2 moveInput = _playerInput.Player.Move.ReadValue<Vector2>();
         _playerRb.velocity = moveInput * _speed;
 
-        Globals.hittingEnemy = Mouse.current.leftButton.isPressed;
+        Globals.hittingEnemy = Keyboard.current.spaceKey.isPressed;
     }
 
     private void Update()
@@ -55,12 +56,13 @@ public class PlayerController : MonoBehaviour
         if (Globals.PlayerHealth <= 0)
         {
             this.gameObject.SetActive(false);
+            SceneManager.LoadScene("GameOver");
         }
 
-        if(Keyboard.current.pKey.isPressed)
+        if(Keyboard.current.qKey.isPressed)
         {
             Time.timeScale = 0;
-            
+
         }
     }
 

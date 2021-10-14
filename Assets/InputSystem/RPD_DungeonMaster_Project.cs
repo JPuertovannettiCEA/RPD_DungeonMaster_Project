@@ -239,7 +239,7 @@ public class @RPD_DungeonMaster_Project : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""05f6913d-c316-48b2-a6bb-e225f14c7960"",
-                    ""path"": ""<Mouse>/leftButton"",
+                    ""path"": ""<Keyboard>/space"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": "";Keyboard&Mouse"",
@@ -283,7 +283,7 @@ public class @RPD_DungeonMaster_Project : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""98467bee-593a-4fca-8d30-247d278bb5e0"",
-                    ""path"": ""<Keyboard>/p"",
+                    ""path"": ""<Keyboard>/q"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Keyboard&Mouse"",
