@@ -53,3 +53,4 @@ MonoBehaviour:
     type: 3}
   _chestAppears: {fileID: 1629141380231661279, guid: 6aed08eef72836d4488046a92c16d092,
     type: 3}
+  _gotKey: {fileID: 7996117621758398401, guid: 42145555c6a02a54aa4ff8922d221351, type: 3}

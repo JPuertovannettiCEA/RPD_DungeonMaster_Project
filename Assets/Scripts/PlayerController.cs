@@ -27,6 +27,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private AudioSource _hitSFX;
 
+    [SerializeField]
+    private AudioSource _pauseIn;
+
     private void Awake()
     {
         _healthRef = GameObject.FindGameObjectWithTag("HealthBar");
@@ -66,7 +69,14 @@ public class PlayerController : MonoBehaviour
 
         if(Keyboard.current.qKey.isPressed)
         {
+            _pauseIn.Play();
             Time.timeScale = 0;
+
+        }
+
+        if(Keyboard.current.spaceKey.isPressed)
+        {
+            _attackSFX.Play();
 
         }
     }
@@ -75,7 +85,6 @@ public class PlayerController : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Enemy"))
         {
-            _hitSFX.Play();
             _minusOffset = other.transform.position.normalized - transform.position.normalized;
             Debug.Log(_minusOffset);
             if (_minusOffset.x <= _enemyOffset.x && _minusOffset.y <= _enemyOffset.y)

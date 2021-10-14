@@ -7,7 +7,7 @@ public class PauseMenu : MonoBehaviour
     public GameObject _resumeButton, _mainMenuButton, _quit, _blurImage, _EventSystem, _healthbar, _chestBar,_endDoor;
 
     [SerializeField]
-    private AudioSource _bgUI;
+    private AudioSource _pauseOut;
 
     private void Awake()
     {
@@ -31,10 +31,11 @@ public class PauseMenu : MonoBehaviour
             _chestBar.gameObject.SetActive(false);
 
         }
+
     }
     public void Resume()
     {
-        _bgUI.Play();
+        _pauseOut.Play();
         _healthbar.gameObject.SetActive(true);
         _chestBar.gameObject.SetActive(true);
         _EventSystem.gameObject.SetActive(false);
@@ -47,7 +48,6 @@ public class PauseMenu : MonoBehaviour
 
     public void MainMenu()
     {
-        _bgUI.Play();
         SceneManager.LoadScene("MainMenu");
     }
 
