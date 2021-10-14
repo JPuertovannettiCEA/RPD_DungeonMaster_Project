@@ -8,16 +8,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: 1cd51565bdc257b48af93741b492c13c
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/GameOver.unity
     guid: 6526fa501a408624b8684f500b368212
   - enabled: 1
     path: Assets/DungeonMaster.unity
     guid: 653a9243eaa28514b83d732086b1dba4
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Instructions.unity
     guid: cd444e6c3054fcf4386c04babdc61a18
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Credits.unity
     guid: 851360bb4f53eac45812869bac507cc3
   m_configObjects: {}
