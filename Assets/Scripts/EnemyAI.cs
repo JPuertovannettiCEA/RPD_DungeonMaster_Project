@@ -44,7 +44,7 @@ public class EnemyAI : MonoBehaviour
             _isDead = true;
             this.gameObject.SetActive(false);
             Globals.DeadAI++;
-            Debug.Log(Globals.DeadAI);
+            // Debug.Log(Globals.DeadAI);
 
         }
     }
@@ -69,9 +69,9 @@ public class EnemyAI : MonoBehaviour
             RotateCharacter();
             if (Globals.hittingEnemy)
             {
-                Debug.Log(Globals.hittingEnemy);
+                // Debug.Log(Globals.hittingEnemy);
                 EnemyHealth -= Globals.AIAttackValue;
-                Debug.Log(EnemyHealth);
+                // Debug.Log(EnemyHealth);
             }
 
         }
