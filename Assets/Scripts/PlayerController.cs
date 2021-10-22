@@ -38,6 +38,8 @@ public class PlayerController : MonoBehaviour
 
     public Animator _anim;
 
+    private Vector2 lastMoveDirection; 
+
     private void Awake()
     {
         _healthRef = GameObject.FindGameObjectWithTag("HealthBar");
@@ -63,8 +65,14 @@ public class PlayerController : MonoBehaviour
     {
         Vector2 moveInput = _playerInput.Player.Move.ReadValue<Vector2>();
         _playerRb.velocity = moveInput * _speed;
+        if(moveInput.x != 0 || moveInput.y != 0)
+        {
+            lastMoveDirection = moveInput;
+        }
         _anim.SetFloat("AnimMoveX", moveInput.x);
         _anim.SetFloat("AnimMoveY", moveInput.y);
+        _anim.SetFloat("AnimLastMoveX", lastMoveDirection.x);
+        _anim.SetFloat("AnimLastMoveY", lastMoveDirection.y);
         _anim.SetFloat("AnimMoveMagnitude", moveInput.magnitude);
 
         Globals.hittingEnemy = Keyboard.current.spaceKey.isPressed;
@@ -88,8 +96,14 @@ public class PlayerController : MonoBehaviour
 
         if (Keyboard.current.spaceKey.isPressed)
         {
+            _anim.SetBool("isAttacking", true);
             _attackSFX.Play();
 
+        }
+
+        if(Keyboard.current.spaceKey.isPressed == false)
+        {
+            _anim.SetBool("isAttacking", false);
         }
     }
 
