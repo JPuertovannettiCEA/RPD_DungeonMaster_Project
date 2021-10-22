@@ -65,6 +65,7 @@ public class PlayerController : MonoBehaviour
         _playerRb.velocity = moveInput * _speed;
         _anim.SetFloat("AnimMoveX", moveInput.x);
         _anim.SetFloat("AnimMoveY", moveInput.y);
+        _anim.SetFloat("AnimMoveMagnitude", moveInput.magnitude);
 
         Globals.hittingEnemy = Keyboard.current.spaceKey.isPressed;
     }
