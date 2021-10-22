@@ -86949,6 +86949,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 41848729453875406, guid: 26aad866f2c75694284d6f27d99bec89,
         type: 3}
+      propertyPath: _anim
+      value: 
+      objectReference: {fileID: 41848729254596609}
+    - target: {fileID: 41848729453875406, guid: 26aad866f2c75694284d6f27d99bec89,
+        type: 3}
       propertyPath: _hitSFX
       value: 
       objectReference: {fileID: 241673635}
@@ -86959,6 +86964,12 @@ PrefabInstance:
       objectReference: {fileID: 586127074}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 26aad866f2c75694284d6f27d99bec89, type: 3}
+--- !u!95 &41848729254596609 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 41848729453875403, guid: 26aad866f2c75694284d6f27d99bec89,
+    type: 3}
+  m_PrefabInstance: {fileID: 41848729254596608}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1038245338146748384
 PrefabInstance:
   m_ObjectHideFlags: 0

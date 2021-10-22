@@ -36,6 +36,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private GameObject _killPlayer;
 
+    public Animator _anim;
+
     private void Awake()
     {
         _healthRef = GameObject.FindGameObjectWithTag("HealthBar");
@@ -61,6 +63,8 @@ public class PlayerController : MonoBehaviour
     {
         Vector2 moveInput = _playerInput.Player.Move.ReadValue<Vector2>();
         _playerRb.velocity = moveInput * _speed;
+        _anim.SetFloat("AnimMoveX", moveInput.x);
+        _anim.SetFloat("AnimMoveY", moveInput.y);
 
         Globals.hittingEnemy = Keyboard.current.spaceKey.isPressed;
     }
@@ -103,6 +107,11 @@ public class PlayerController : MonoBehaviour
             }
         }
     }
+
+    //void Animate()
+    //{
+    //    _anim.SetFloat("AnimMoveX", moveDire)
+    //}
 
 
 }
